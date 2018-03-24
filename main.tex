@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt,twoside]{article} % kaksipuolinen
+\usepackage[finnish]{babel}            %suomenkielinen tavutus ja sanasto
+\usepackage[T1]{fontenc}               %valitaan ääkkösfonttikoodaus
+\usepackage[utf8]{inputenc}        	% skandit utf-8 koodauksella
+\usepackage{graphicx}           %kuvat
+%\usepackage[dvips]{graphicx}           %ps-kuvat
+
+\setlength{\oddsidemargin}{1.85cm} %kaksipuoliset marginaalit
+\setlength{\evensidemargin}{0.35cm} %kaksipuoliset marginaalit
+
+\begin{document}
+
+\pagestyle{empty}  %ei sivunumeroa sivun alareunaan
+
+\begin{center}
+\includegraphics[width=4cm]{soihtu.png} %talleta kuva linkistä omaan hakemistoosi
+\end{center}
+
+\vspace{3.0cm}
+\begin{center}\large
+Transferability of leadership and management
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+Juha Ylönen
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+Masters Thesis\\
+December 2018
+\end{center}
+
+\vspace{5.0cm}
+\begin{center}
+Management and Organization\\
+University of Turku\\
+\end{center}
+
+\cleardoublepage
+
+%säädetään 2-puolisen sivun marginaalit vaatimuksia vastaaviksi
+\addtolength{\oddsidemargin}{-1.1cm}
+\addtolength{\voffset}{-2.3cm}
+
+\begin{minipage}{15cm}
+
+\noindent
+University of Turku\\
+Management and Organization\\
+\\
+JUHA YLÖNEN: Tiivistelmäsivun laadinta LaTeX-ladontaohjelmalla\\
+Masters Thesis, n pages, n attachments.\\
+Management and Organization\\
+December 2018\\
+\rule{\textwidth}{.2mm}\\
+\\
+Tiivistelmäsivun tekeminen LaTeX-ladontajärjestelmällä on helppoa. Kopioidaan esimerkiksi www-sivulta tiivistelmäsivun LaTeX-koodi, jossa on valmiiksi oikeanlaiset marginaalit.
+
+\vspace{4mm}\noindent Sitten vain kirjoitellaan erittäin fiksua tekstiä tiivistelmäsivu täyteen. Muistetaan laittaa \noindent-komento kappaleen
+alkuun, niin LaTeX ei sisennä ensimmäistä riviä.
+
+\vspace{4mm}\noindent Tuo $\backslash$vspace-komento taasen jättää sopivan välin kappaleiden väliin - 4mm näyttää aika hyvältä.
+
+\vspace{4mm}\noindent Muistetaan lopettaa ajoissa ympäripyöreän liirumlaarumin kirjoittelu.
+
+\vspace{4mm}\noindent Asiasanat: tiivistelmäsivu, Pro gradu -tutkielma, LaTeX-ladontajärjestelmä.
+
+\end{minipage}
+
+\cleardoublepage
+
+\tableofcontents
+\clearpage
+
+\pagestyle{plain} 
+\setcounter{page}{1}
+
+%palautetaan 2-puolisen sivun marginaalit oletusasetuksiin
+\addtolength{\oddsidemargin}{1.1cm}
+\addtolength{\voffset}{2.3cm}
+
+\input{intro.tex}
+\clearpage
+\input{literature.tex}
+\clearpage
+\input{method.tex}
+\clearpage
+\input{result.tex}
+\clearpage
+\input{conclusion.tex}
+\clearpage
+
+% insert references
+\bibliographystyle{unsrt}
+\bibliography{bib.bib}
+
+
+
+\end{document}
